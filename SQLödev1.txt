@@ -1,0 +1,14 @@
+SELECT FirstName, LastName, Salary FROM Employees;
+SELECT column_name  
+FROM information_schema.columns  
+WHERE table_name = 'employees';
+SELECT DISTINCT Departmentid FROM Employees;
+SELECT column_name  
+FROM information_schema.columns  
+WHERE table_name = 'employees';
+SELECT e.*  
+FROM Employees e  
+JOIN Departments d ON e.DepartmentID = d.DepartmentID  
+WHERE d.DepartmentName = 'IT';
+SELECT * FROM Employees ORDER BY Salary DESC;
+SELECT FirstName || ' ' || LastName AS FullName FROM Employees;
