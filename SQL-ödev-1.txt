@@ -1,0 +1,23 @@
+TurkStudentCo SQL Ödev 1
+
+SELECT FirstName, LastName, Salary FROM Employees;
+SELECT column_name  
+FROM information_schema.columns  
+WHERE table_name = 'employees';
+SELECT DISTINCT Departmentid FROM Employees;
+SELECT column_name  
+FROM information_schema.columns  
+WHERE table_name = 'employees';
+SELECT e.*  
+FROM Employees e  
+JOIN Departments d ON e.DepartmentID = d.DepartmentID  
+WHERE d.DepartmentName = 'IT';
+SELECT * FROM Employees ORDER BY Salary DESC;
+SELECT FirstName || ' ' || LastName AS FullName FROM Employees;
+
+1. Employess tablosunda firstname, lastname ve salary bilgilerini getirdim.
+2. Departmanları benzersiz olarak listelemek için bir kod kullandım fakat anlamadığım bir sebepten PostgreSQL "department" adlı dosyayı bulamadı, bu kısımda baya uğraştım ve farklı bir adla kaydedildiğine inandığım için sorguyu değiştirip önce employeesteki tabloların isimlerini sorguladım.
+3. Depertmant dosyasının "departmantid" olarak adlandırıldığını tablodan görüp ona uygun bir şekilde sorguladım. 
+4. IT departmanında çalışanların bilgilerini sorguladım.
+5. Çalışanların maaşlarını büyükten küçüğe sıralaması için bir sorgu yazdım.
+6. Çalışanların firstName ve lastname alanlarını birleştirerek tam adlarını içeren yeni bir kolon oluşturacak bir sorgu yazarak bitirdim.
